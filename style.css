@@ -1,0 +1,119 @@
+body {
+  background-color: #232323;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.square {
+  width: 30%;
+  background-color: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.6s;
+  --webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+}
+
+#container {
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  background: steelBlue;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 20px 0;
+}
+
+#colorDisplay {
+  font-size: 200%;
+}
+
+#message {
+  /* keeps the buttons away from the message even without the message yet */
+  display: inline-block;
+  width: 15%;
+  font-size: 1.5rem;
+}
+
+#stripe {
+  background-color: white;
+  height: 30px;
+  text-align: center;
+  color: black;
+}
+
+.selected {
+  color: white;
+  background: steelblue;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  color: steelblue;
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.2s;
+  --webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  /* remove the outline that lingers when the buttom is clicked */
+  outline: none;
+}
+
+button:hover {
+  color: white;
+  background: steelblue;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  #stripe {
+    background-color: white;
+    height: auto;
+    text-align: center;
+    color: black;
+  }
+  button {
+    font-size: 15px;
+  }
+  #message {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 325px) {
+  h1 {
+    font-size: 15px;
+  }
+  #stripe {
+    background-color: white;
+    height: auto;
+    text-align: center;
+    color: black;
+  }
+  button {
+    font-size: 12px;
+  }
+  #message {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+}
