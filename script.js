@@ -1,11 +1,3 @@
-/** Refactored List:
- * removed easyBtn and hardBtn and added a loop to create a more dynamic difficulty modes.
- * created new reset() derived from resetButton event listener callback()
- * added init() containing modeButtons and squares listener functions to initialize program
- * created modeButtons listener own function with injecting reset() in each mode
- * created squares listener own function
- */
-
 var numSquares = 9;
 var colors = [];
 var pickedColor;
@@ -28,7 +20,6 @@ function setUpModeButtons() {
   for (var i = 0; i < modeButtons.length; i++) {
     modeButtons[i].addEventListener("click", function() {
       // toggles back and forth mode buttons when clicked
-      // .this function does not work on this case
       modeButtons.forEach(mode => mode.classList.remove("selected"));
       this.classList.add("selected");
 
@@ -112,11 +103,8 @@ function generateRandomColors(num) {
 
 function randomColor() {
   /* multiply by 256 and then floor it to generate num between 0 and 255 inclusive */
-  // pick a "red" from 0 - 255
   var r = Math.floor(Math.random() * 256);
-  // pick a "green" from 0 - 255
   var g = Math.floor(Math.random() * 256);
-  // pick a "blue" from 0 - 255
   var b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
